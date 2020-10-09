@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fotografias"
+    }
+  },
+  "defaultProject": "fotografias",
+  "cli": {
+    "analytics": "f814e69d-f3ee-4b95-b3ed-8ea2b8c63bec"
+  }
 }
