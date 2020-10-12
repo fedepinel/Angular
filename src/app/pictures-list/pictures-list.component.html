@@ -1,0 +1,31 @@
+<h1>Lista de fotografias</h1>
+<table class="container-fluid table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Miniatura foto</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Resolucion</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><img [src]="nascar.miniatura" [alt]="nascar.nombre"></th>
+        <td>{{nascar.nombre}}</td>
+        <td>{{nascar.resolucion}}</td>
+        <td>${{nascar.precio}}</td>
+      </tr>
+      <tr>
+        <th><img [src]="rally.miniatura" [alt]="rally.nombre"></th>
+        <td>{{rally.nombre}}</td>
+        <td>{{rally.resolucion}}</td>
+        <td>${{rally.precio}}</td>
+      </tr>
+      <tr>
+        <th><img [src]="fordferrari.miniatura" [alt]="fordferrari.nombre"></th>
+        <td>{{fordferrari.nombre}}</td>
+        <td>{{fordferrari.resolucion}}</td>
+        <td>${{fordferrari.precio}}</td>
+      </tr>
+    </tbody>
+  </table>
