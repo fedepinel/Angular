@@ -9,23 +9,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th><img [src]="nascar.miniatura" [alt]="nascar.nombre"></th>
-        <td>{{nascar.nombre}}</td>
-        <td>{{nascar.resolucion}}</td>
-        <td>${{nascar.precio}}</td>
-      </tr>
-      <tr>
-        <th><img [src]="rally.miniatura" [alt]="rally.nombre"></th>
-        <td>{{rally.nombre}}</td>
-        <td>{{rally.resolucion}}</td>
-        <td>${{rally.precio}}</td>
-      </tr>
-      <tr>
-        <th><img [src]="fordferrari.miniatura" [alt]="fordferrari.nombre"></th>
-        <td>{{fordferrari.nombre}}</td>
-        <td>{{fordferrari.resolucion}}</td>
-        <td>${{fordferrari.precio}}</td>
+      <!-- Preguntar por que el primero no funcion el background color -->
+      <tr *ngFor="let picture of pictures" [ngClass] ="{'promocion': picture.promocion }">
+        <th><img [src]="picture.miniatura" [alt]="picture.nombre"></th>
+        <td>{{picture.nombre}}</td>
+        <td>{{picture.resolucion}}</td>
+        <td>{{picture.precio | currency}}</td>
       </tr>
     </tbody>
   </table>
