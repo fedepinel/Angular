@@ -5,14 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PicturesListComponent } from './pictures-list/pictures-list.component';
 
+import { FormsModule } from '@angular/forms';
+import { PicturesAboutComponent } from './pictures-about/pictures-about.component';
+import { PicturesPictureComponent } from './pictures-picture/pictures-picture.component';
+import { PicturesCartComponent } from './pictures-cart/pictures-cart.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PicturesListComponent
+    PicturesListComponent,
+    PicturesAboutComponent,
+    PicturesPictureComponent,
+    PicturesCartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

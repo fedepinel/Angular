@@ -3,5 +3,7 @@ export interface Picture{
     nombre: string,
     resolucion: string,
     precio: number,
-    promocion: boolean
+    stock: number,
+    promocion: boolean,
+    cantidad: number
 }

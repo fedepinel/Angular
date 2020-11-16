@@ -6,6 +6,8 @@
         <th scope="col">Nombre</th>
         <th scope="col">Resolucion</th>
         <th scope="col">Precio</th>
+        <th scope="col">Cantidad disponibles</th>
+        <th scope="col">Compra</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +17,12 @@
         <td>{{picture.nombre}}</td>
         <td>{{picture.resolucion}}</td>
         <td>{{picture.precio | currency}}</td>
+        <td><span class="badge badge-warning" *ngIf="picture.stock==0">Sin Stock </span>{{picture.stock}}</td>
+        <td>
+          <button class="btn btn-success" (click)="reducirCantidad(picture)">-</button>
+          <input type="text" [(ngModel)]="picture.cantidad" (keyup)="modificacionCantidad($event, picture)">
+          <button class="btn btn-success" (click)="aumentarCantidad(picture)">+</button>
+        </td>
       </tr>
     </tbody>
   </table>
