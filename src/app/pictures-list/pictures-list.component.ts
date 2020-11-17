@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PictureCartService } from '../picture-cart.service';
 import { Picture } from './picture';
 
 @Component({
@@ -37,10 +38,17 @@ export class PicturesListComponent implements OnInit {
       cantidad : 0,
     }
   ]
-  
-  constructor() { }
+
+  constructor(private cart: PictureCartService) { }
 
   ngOnInit(): void {
+  }
+
+  agregarAlCarrito(picture): void{
+    this.cart.agregarAlCarrito(picture);
+    //Resta del stock las que compre el usuario y luego las reinicia a cero para la siguiente compra
+    picture.stock -= picture.cantidad;
+    picture.cantidad = 0;
   }
 
   maximoAlcanzado(m: String){

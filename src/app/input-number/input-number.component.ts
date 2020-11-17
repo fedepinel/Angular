@@ -31,7 +31,7 @@ export class InputNumberComponent implements OnInit {
   aumentarCantidad(): void{
     if (this.cantidad < this.max && this.max > 0) {
       this.cantidad++;
-      this.cantidadChange.emit(this.cantidad);     
+      this.cantidadChange.emit(this.cantidad);
     }
     else{
       this.maximoAlcanzado.emit("Se alcanzo el maximo");
@@ -40,17 +40,17 @@ export class InputNumberComponent implements OnInit {
   reducirCantidad(): void{
     if (this.cantidad > 0) {
       this.cantidad--;
-      this.cantidadChange.emit(this.cantidad);      
+      this.cantidadChange.emit(this.cantidad);
     }
   }
-  //Arreglar el tema del limite de elementos y que no se puedan poner letras
+  //Arreglar Bug al comprar fotos
   modificacionCantidad(event): void{
     if(event.key >=1 && event.key <=9){
       //arreglar por que toma el primer numero
       if(event.target.value > this.max){
         event.target.value = this.max;
-        this.cantidadChange.emit(this.cantidad); 
-      }   
-    }   
+        this.cantidadChange.emit(this.cantidad);
+      }
+    }
   }
 }
