@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { PicturesAboutComponent } from './pictures-about/pictures-about.component';
 import { PicturesPictureComponent } from './pictures-picture/pictures-picture.component';
 import { PicturesCartComponent } from './pictures-cart/pictures-cart.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PicturesCartComponent } from './pictures-cart/pictures-cart.component';
     PicturesListComponent,
     PicturesAboutComponent,
     PicturesPictureComponent,
-    PicturesCartComponent
+    PicturesCartComponent,
+    InputNumberComponent
   ],
   imports: [
     BrowserModule,

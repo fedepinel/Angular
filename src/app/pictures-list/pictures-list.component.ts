@@ -43,24 +43,8 @@ export class PicturesListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  aumentarCantidad(picture: Picture): void{
-    if (picture.cantidad < picture.stock && picture.stock > 0) {
-      picture.cantidad++;     
-    }
-  }
-  reducirCantidad(picture: Picture): void{
-    if (picture.cantidad > 0) {
-      picture.cantidad--;     
-    }
-  }
-  //Arreglar el tema del limite de elementos y que no se puedan poner letras
-  modificacionCantidad(event, picture: Picture): void{
-    if(event.key >=1 && event.key <=9){
-      //arreglar por que toma el primer numero
-      if(event.target.value > picture.stock){
-        event.target.value = picture.stock
-      }   
-    }   
+  maximoAlcanzado(m: String){
+    alert(m);
   }
 
 }

@@ -19,9 +19,7 @@
         <td>{{picture.precio | currency}}</td>
         <td><span class="badge badge-warning" *ngIf="picture.stock==0">Sin Stock </span>{{picture.stock}}</td>
         <td>
-          <button class="btn btn-success" (click)="reducirCantidad(picture)">-</button>
-          <input type="text" [(ngModel)]="picture.cantidad" (keyup)="modificacionCantidad($event, picture)">
-          <button class="btn btn-success" (click)="aumentarCantidad(picture)">+</button>
+          <app-input-number [(cantidad)]="picture.cantidad" [max]="picture.stock" (maximoAlcanzado)="maximoAlcanzado($event)"></app-input-number>
         </td>
       </tr>
     </tbody>
