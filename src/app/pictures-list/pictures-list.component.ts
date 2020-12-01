@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PictureCartService } from '../picture-cart.service';
+import { PictureDataService } from '../picture-data.service';
 import { Picture } from './picture';
 
 @Component({
@@ -39,7 +40,7 @@ export class PicturesListComponent implements OnInit {
     }
   ]
 
-  constructor(private cart: PictureCartService) { }
+  constructor(private cart: PictureCartService, private picturesDataService: PictureDataService) { }
 
   ngOnInit(): void {
   }
